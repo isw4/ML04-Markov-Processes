@@ -1,20 +1,28 @@
-# Markov Decision Processes
+### CS 7641 Assignment 4 - Markov Decision Processes
 
-## Output
-Output CSVs and images are written to `./output` and `./output/images` respectively. Sub-folders will be created for
-each RL algorithm (PI, VI, and Q) as well as one for the final report data.
+Code can be found at: https://github.com/isw4/ML04-Markov-Processes  
+Code taken from: https://github.com/cmaron/CS-7641-assignments (permission to take code given by professor)
 
-If these folders do not exist the experiments module will attempt to create them.
+## Directories
+**environments/**  
+    Contains the 2 MDP problems  
+**experiments/**  
+    Contains code to run experiments on the 2 problems over a range of hyperparameters  
+**solver/**  
+    Contains code to solve value/policy iteration and Q-learning  
+**output/**  
+    Contains output graphs and csvs from the experiments
 
-Graphing:
----------
+## Installation
+Install the pip dependencies using the requirements file and pipenv
 
-The run_experiment script can be use to generate plots via:
+## Running
+To run the experiments:
+~~~
+python run_experiments.py --all
+~~~
 
-```
+To generate plots from the csv data:
+~~~
 python run_experiment.py --plot
-```
-
-Since the files output from the experiments follow a common naming scheme this will determine the problem, algorithm,
-and parameters as needed and write the output to sub-folders in `./output/images` and `./output/report`.
-
+~~~
